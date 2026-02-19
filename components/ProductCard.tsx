@@ -1,6 +1,6 @@
 import React from 'react';
-import { Product } from '../types';
-import { Button } from './Button';
+import { Product } from '../types.ts';
+import { Button } from './Button.tsx';
 import { Plus } from 'lucide-react';
 
 interface ProductCardProps {

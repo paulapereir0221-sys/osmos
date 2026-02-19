@@ -1,5 +1,5 @@
 import React from 'react';
-import { WHATSAPP_NUMBER } from '../constants';
+import { WHATSAPP_NUMBER } from '../constants.ts';
 
 export const FloatingWhatsApp: React.FC = () => {
   const handleClick = () => {
