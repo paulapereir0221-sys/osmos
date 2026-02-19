@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Logo } from './Logo';
+import { Logo } from './Logo.tsx';
 import { Menu, X, ShoppingCart } from 'lucide-react';
-import { CartItem } from '../types';
+import { CartItem } from '../types.ts';
 
 interface NavbarProps {
   onOpenCart: () => void;

@@ -1,18 +1,15 @@
 import React from 'react';
-import { FACADE_IMAGE_URL, COMPANY_ADDRESS } from '../constants';
+import { FACADE_IMAGE_URL, COMPANY_ADDRESS } from '../constants.ts';
 import { MapPin, Clock, Award } from 'lucide-react';
 
 export const AboutSection: React.FC = () => {
   return (
     <section id="sobre" className="py-20 bg-brand-black relative overflow-hidden scroll-mt-20">
-      {/* Decorative background elements */}
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
-          {/* Image Side */}
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-800 group">
             <div className="absolute inset-0 bg-brand-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none" />
             <img 
@@ -22,7 +19,6 @@ export const AboutSection: React.FC = () => {
             />
           </div>
 
-          {/* Content Side */}
           <div className="space-y-8">
             <div>
               <h2 className="text-brand-accent font-bold tracking-wider uppercase mb-2">Nossa Loja</h2>

@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
-import { CartItem } from '../types';
-import { Button } from './Button';
-import { WHATSAPP_NUMBER } from '../constants';
+import { CartItem } from '../types.ts';
+import { Button } from './Button.tsx';
+import { WHATSAPP_NUMBER } from '../constants.ts';
 import { X, Trash2, ShoppingBag } from 'lucide-react';
 
 interface CartDrawerProps {
@@ -19,7 +19,6 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose, cartIte
   const handleCheckout = () => {
     if (cartItems.length === 0) return;
 
-    // Build WhatsApp Message
     let message = `Olá! Gostaria de finalizar meu pedido no site:\n\n`;
     cartItems.forEach(item => {
       message += `• ${item.quantity}x ${item.name} - R$ ${item.price.toFixed(2)}\n`;
@@ -33,16 +32,13 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose, cartIte
 
   return (
     <div className={`fixed inset-0 z-50 transform ease-in-out transition-all duration-300 ${isOpen ? "visible" : "invisible"}`}>
-      {/* Overlay */}
       <div 
         className={`absolute inset-0 bg-black/60 transition-opacity duration-300 ${isOpen ? "opacity-100" : "opacity-0"}`} 
         onClick={onClose}
       />
 
-      {/* Drawer */}
       <div className={`absolute right-0 top-0 h-full w-full max-w-md bg-brand-dark shadow-2xl transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
         <div className="flex flex-col h-full">
-          {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-700">
             <h2 className="text-xl font-bold text-white flex items-center gap-2">
               <ShoppingBag className="w-5 h-5 text-brand-accent" />
@@ -53,7 +49,6 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose, cartIte
             </button>
           </div>
 
-          {/* Items */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             {cartItems.length === 0 ? (
               <div className="flex flex-col items-center justify-center h-full text-gray-400">
@@ -83,7 +78,6 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose, cartIte
             )}
           </div>
 
-          {/* Footer */}
           {cartItems.length > 0 && (
             <div className="p-4 bg-brand-black border-t border-gray-800">
               <div className="flex justify-between items-center mb-4 text-white">

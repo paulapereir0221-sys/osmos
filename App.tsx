@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { ProductCard } from './components/ProductCard';
-import { AboutSection } from './components/AboutSection';
-import { FloatingWhatsApp } from './components/FloatingWhatsApp';
-import { CartDrawer } from './components/CartDrawer';
-import { MOCK_PRODUCTS } from './constants';
-import { Product, CartItem } from './types';
+import { Navbar } from './components/Navbar.tsx';
+import { Hero } from './components/Hero.tsx';
+import { ProductCard } from './components/ProductCard.tsx';
+import { AboutSection } from './components/AboutSection.tsx';
+import { FloatingWhatsApp } from './components/FloatingWhatsApp.tsx';
+import { CartDrawer } from './components/CartDrawer.tsx';
+import { MOCK_PRODUCTS } from './constants.ts';
+import { Product, CartItem } from './types.ts';
 import { Instagram, Facebook, Mail } from 'lucide-react';
 
 const App: React.FC = () => {

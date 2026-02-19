@@ -1,4 +1,4 @@
-import { Product } from './types';
+import { Product } from './types.ts';
 
 export const WHATSAPP_NUMBER = "5511956365518";
 export const FACADE_IMAGE_URL = "https://lh3.googleusercontent.com/d/1EOmeow-yRAZWniUNwxotcSf9bRpKcSf4";
